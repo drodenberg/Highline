@@ -39,6 +39,6 @@ app.use("/UE4Game-HTML5-Shipping.js", express.static(__dirname + "/walkthroughs/
 app.use("/UE4Game-HTML5-Shipping.js.mem", express.static(__dirname + "/walkthroughs/office/UE4Game-HTML5-Shipping.js.mem"));
 app.use("/UE4Game-HTML5-Shipping.js.symbols", express.static(__dirname + "/walkthroughs/office/UE4Game-HTML5-Shipping.js.symbols"));
 
-app.listen(3001, function() {
-  console.log('I\'m Listening...');
-})
+var port = process.env.PORT || CONFIG.port;
+
+app.listen(port);
