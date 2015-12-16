@@ -6,18 +6,10 @@ app.get('/', function (req, res) {
 });
 
 app.get('/residence', function (req, res) {
-  res.sendFile(__dirname + '/client/views/residenceView.html');
-});
-
-app.get('/residence.html', function (req, res) {
   res.sendFile(__dirname + '/walkthroughs/residence/residence.html');
 });
 
 app.get('/office', function (req, res) {
-  res.sendFile(__dirname + '/client/views/officeView.html');
-});
-
-app.get('/office.html', function (req, res) {
   res.sendFile(__dirname + '/walkthroughs/office/office.html');
 });
 
@@ -39,6 +31,5 @@ app.use("/UE4Game-HTML5-Shipping.js", express.static(__dirname + "/walkthroughs/
 app.use("/UE4Game-HTML5-Shipping.js.mem", express.static(__dirname + "/walkthroughs/office/UE4Game-HTML5-Shipping.js.mem"));
 app.use("/UE4Game-HTML5-Shipping.js.symbols", express.static(__dirname + "/walkthroughs/office/UE4Game-HTML5-Shipping.js.symbols"));
 
-var port = process.env.PORT || CONFIG.port;
+app.listen(3001);
 
-app.listen(port);

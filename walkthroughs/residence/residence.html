@@ -6,7 +6,7 @@
     <title>U_Sample_TH_Web</title>
     <style type="text/css">
 body {
-  background: black;
+  background-color: black;
   color: gray;
   font-family: Helvetica, sans-serif;
 }
@@ -72,6 +72,24 @@ video {
     </style>
   </head>
   <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Highline Visualization</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/residence">Residence</a></li>
+            <li><a href="/office">Office</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </br>
+</br>
+</br>
+</br>
+
     <div class="emscripten" id="status">Downloading...</div>
     <div class="emscripten">
       <progress value="0" max="100" id="progress" hidden=1></progress>
@@ -289,5 +307,9 @@ else
   document.getElementById('status').innerHTML = ""; 
 }
     </script>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">    
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
   </body>
 </html>
